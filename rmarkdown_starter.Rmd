@@ -1,10 +1,12 @@
 ---
-title:  "6060 Practice: RMarkdown"
-author: "Your Name Here"
+title: '6060 Practice: RMarkdown'
+author: "Parco Sin"
 output:
   pdf_document:
     number_sections: yes
     toc_depth: 3
+  word_document:
+    toc_depth: '3'
 ---
 
 ```{r,echo=FALSE,message=FALSE, warning=FALSE}
@@ -15,7 +17,7 @@ library(tidyverse)
 library(apaTables)
 
 #Load data 
-analytic_data        <- read_csv("analytic_data.csv")
+analytic_data <- read_csv("quiz2_analytic_data_female.csv")
 
 ```
 
@@ -32,3 +34,26 @@ psych::pairs.panels(analytic_data)
 \pagebreak
 
 # Distributions
+## Distributions of negative affect scores
+
+Below we can see the distribution of negative affect scores is skewed.
+
+print(my.hist2)
+
+
+\pagebreak
+
+## Neuroticism Distribution
+
+Below we can see the distribution of neuroticism scores is relatively normal.
+
+print(my.hist)
+
+\pagebreak
+
+#Relations among variables
+##Scatter plot for Negative Affect and Neuroticism
+
+Below you can see the correlation between negative affect and neuroticism with a regression line.
+
+print(my.plot)
